@@ -41,9 +41,9 @@ const Agenda = ({clientesLlamadas,clientesFiltro, cargando}) => {
             <td className={`td-${cliente.primary_attr}`}></td> 
             <td>{cliente.localized_name}</td>
             <td>LLamar <br/> <span className='span'>Descuento temportada</span> </td>
-            <td><img src={icoDot}></img></td>
-            <td><img src={icoPhone} ></img></td>
-            <td><img src={icoMsg}></img></td>            
+            <td><img src={icoDot} alt='icoDot'></img></td>
+            <td><img src={icoPhone} alt='icoPhone' ></img></td>
+            <td><img src={icoMsg} alt='icoPhone' ></img></td>            
           </tr>
           )
           :
@@ -54,9 +54,9 @@ const Agenda = ({clientesLlamadas,clientesFiltro, cargando}) => {
               <td className={`td-${cliente.primary_attr}`}></td> 
               <td>{cliente.localized_name}</td>
               <td>LLamar <br/> <span className='span'>Descuento temportada</span> </td>
-              <td><img src={icoDot}></img></td>
-              <td><img src={icoPhone} ></img></td>
-              <td><img src={icoMsg}></img></td>            
+              <td><img src={icoDot} alt='icoDot'></img></td>
+              <td><img src={icoPhone} alt='icoPhone'></img></td>
+              <td><img src={icoMsg} alt='icoPhone'></img></td>            
             </tr>
             )
           )}

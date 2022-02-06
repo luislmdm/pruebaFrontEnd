@@ -18,28 +18,13 @@ function App() {
 
   const [clientesLlamadas, setClientesLlamadas] = useState([])
   const [clientesdb, setClientesDb] = useState([])
-  const [clienteid, setClienteId] = useState([])
-  const [datosCliente, setDatosCliente] = useState({})
   const [cargando, setCargando] = useState (true)
   const [date, setDate] = useState(getCurrentDate())
   const [filter, setFilter] = useState('')
   const [clientesFiltro, setClientesFiltro] = useState([])
 
-  let clientes = [
-    {
-      name:'Luis',
-      apellido:'Delgado'
-    },
-    {
-      name:'Manuel',
-      apellido:'Delgado'
-    }, 
-    {
-      name:'Sara',
-      apellido:'Delgado'
-    },
-  ]
-  // clientesLlamadas.map(cliente => filtro.push(cliente.localized_name))
+  
+
   
    useEffect(() => {
     const url='https://api.opendota.com/api/proPlayers'
@@ -102,7 +87,7 @@ function App() {
                   onChange={handleOnChangeFilter}
                                                      
                 />
-                <img src={icoFilter}/>
+                <img src={icoFilter} alt="ico"/>
               </div>
               <div>
                 <input type="date" value={date} onChange={handleOnChange}/>  
@@ -149,8 +134,6 @@ function App() {
        <nav className="nav-clientes">
         <NavClientes
         clientesdb = {clientesdb}
-        setClienteId = {setClienteId}
-        setDatosCliente = {setDatosCliente}
         cargando = {cargando}
         
         />
